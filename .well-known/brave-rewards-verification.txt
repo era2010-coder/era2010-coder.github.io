@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: snowcatridge10.github.io
-Token: 0549a16c95bcd53838ce0335373bfa3f74faae803a29e9cab29ef5fff09d5e05
