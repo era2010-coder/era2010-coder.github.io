@@ -27,22 +27,31 @@
             padding: 20px;
             border-radius: 10px;
             background: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
         }
 
-        .username {
+        .typing {
             font-size: 2.5em;
-            animation: code-blink 1.5s infinite;
+            border-right: 4px solid #61dafb;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(15) forwards, stop-caret 0s forwards 2s;
         }
 
-        @keyframes code-blink {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 15ch; } /* Length of the username */
+        }
+
+        @keyframes stop-caret {
+            from { border-color: #61dafb; }
+            to { border-color: transparent; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="username">ProgramminCat</div>
+        <div class="typing">ProgramminCat</div>
     </div>
 </body>
 </html>
