@@ -16,9 +16,10 @@
             background-color: #282c34;
             color: #61dafb;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
         }
 
         .container {
@@ -28,6 +29,8 @@
             border-radius: 10px;
             background: rgba(0, 0, 0, 0.7);
             overflow: hidden;
+            margin-bottom: 100px;
+            margin-top: 30vh;
         }
 
         .typing {
@@ -47,11 +50,38 @@
             from { border-color: #61dafb; }
             to { border-color: transparent; }
         }
+
+        .links {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 200vh;
+            margin-bottom: 60vh;
+        }
+
+        .link {
+            color: #61dafb;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="typing">ProgramminCat</div>
     </div>
+    
+    <div class="links" id="linksSection">
+        <h1>ProgramminCat</h1><br>
+        <a href="https://github.com/ProgramminCat" class="link">Github</a><br><br>
+        <img src="https://streak-stats.demolab.com?user=ProgramminCat&theme=dracula">
+    </div>
+
+    <script>
+        // Scroll to links section after typing animation
+        setTimeout(() => {
+            document.body.style.overflow = "visible";
+            document.getElementById('linksSection').scrollIntoView({ behavior: 'smooth' });
+        }, 3000);
+    </script>
 </body>
 </html>
